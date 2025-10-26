@@ -1,0 +1,19 @@
+[package]
+name = "otp_server"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.25"
+egui = "0.25"
+des = "0.8"
+hex = "0.4"
+chrono = "0.4"
+encoding_rs = "0.8"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "windef", "wingdi"] }
+
+[[bin]]
+name = "otp_server"
+path = "src/main.rs"
